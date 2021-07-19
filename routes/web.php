@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/kevin',function(){
-    $kev = "<h2>kevin</h2>";
-    return $kev ;
+Route::get('/welcome/{kev}', function ($kev) {
+
+    return view('welcome', compact('kev'));
 });
+
+// Route::get('/kevin',function(){
+//     $kev = "<h2>kevin</h2>";
+//     return $kev ;
+// });
