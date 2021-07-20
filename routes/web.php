@@ -19,12 +19,19 @@ Route::get('/welcome/{kev}', function ($kev) {
     return view('welcome', compact('kev'));
 });
 
+
+Route::get('/couleur/{nav}', function($nav){
+    return view('index', compact('nav'));
+});
+
+
+
 Route::get('/main',function (){
     $var1 = 48;
     $var2 =10;
     return view('main', compact('var1','var2'));
 });
-// Route::get('/kevin',function(){
-//     $kev = "<h2>kevin</h2>";
-//     return $kev ;
-// });
+Route::get('/kevin',function(){
+    $kev = "<h2>kevin</h2>";
+    return $kev ;
+});
